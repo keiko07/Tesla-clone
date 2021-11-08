@@ -7,7 +7,7 @@ export const Home = () => {
         <Container>
             <Section 
                 title="Model S"
-                description = "Order Online for touchless Delivery 54MIN"
+                description = "Order Online for touchless Delivery 1:42:30MIN"
                 backgroundImg="model-s.jpg"
                 leftBtnText="Custom order"
                 rightBtnText="Existing inventory"

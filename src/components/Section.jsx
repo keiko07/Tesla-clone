@@ -1,29 +1,35 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade' //react-reveal
 
 export const Section = (props) => {
     console.log(props)
     return (
         <Wrap bgImage={props.backgroundImg}>
-
-            <ItemText>
-                <h1>{ props.title }</h1>
-                <p>{ props. description }</p>
-            </ItemText>
+            <Fade bottom>
+                <ItemText>
+                    <h1>{ props.title }</h1>
+                    <p>{ props. description }</p>
+                </ItemText>
+            </Fade>
+            
 
             <Buttons>
-                <ButtonGroup>
-                    <LeftButton>
-                        { props.leftBtnText }
-                    </LeftButton>
+                <Fade bottom>
+                    <ButtonGroup>
+                        <LeftButton>
+                            { props.leftBtnText }
+                        </LeftButton>
 
-                    {/* Si el boton derecho existe entonces lo muestras, pero si rightBtnText = nada entonces lo omites */}
-                    { props.rightBtnText && 
-                        <RightButton>
-                            {props.rightBtnText}
-                        </RightButton>
-                    }
-                </ButtonGroup>
+                        {/* Si el boton derecho existe entonces lo muestras, pero si rightBtnText = nada entonces lo omites */}
+                        { props.rightBtnText && 
+                            <RightButton>
+                                {props.rightBtnText}
+                            </RightButton>
+                        }
+                    </ButtonGroup>
+                </Fade>
+                
                 <DownArrow src="/images/down-arrow.svg"/>
             </Buttons>
 
